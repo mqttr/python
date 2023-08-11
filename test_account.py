@@ -27,7 +27,7 @@ class TestAccount():
         assert self.a1.get_name() == "John"
 
     def test_deposit(self):
-        print("Running test_init")
+        print("Running test_deposit")
 
         # Bad amounts
         assert False == self.a1.deposit(-1)
