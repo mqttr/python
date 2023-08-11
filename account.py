@@ -3,17 +3,17 @@ class Account:
         '''
         Creates an account with a zero (0) balance
 
-        :param name: Account's user's name
+        :param name: Account's name
         '''
         self.__account_name = name
         self.__account_balance = 0.0
     
     def deposit(self, amount: float) -> bool:
         '''
-        Method decrements account balance. It fails when new balance is less than previous balance or amount is <= 0.
+        Method to deposit funds from an account.
 
-        :param amount: Increments balance by amount
-        :return: True/False depending on success of withdraw
+        :param amount: Amount to be deposited
+        :return: True if deposit is successful; False if deposit is unsuccessful
         '''
         newBalance = self.__account_balance + amount
         if newBalance <= self.__account_balance:
@@ -23,10 +23,10 @@ class Account:
 
     def withdraw(self, amount: float) -> bool:
         '''
-        Method increments account balance. It fails when new balance is more than previous balance or amount is <= 0.
+        Method to withdraw funds from an account
 
-        :param amount: Decrements balance by amount
-        :return: True/False depending on success of withdraw
+        :param amount: Amount to be withdrawn
+        :return: True if withdraw is successful; False if withdraw is unsuccessful
         '''
         newBalance = self.__account_balance - amount
         if newBalance < 0 or newBalance >= self.__account_balance:
@@ -38,7 +38,7 @@ class Account:
         '''
         Method gets the current balance of the account
 
-        :return: Account User's current balance
+        :return: Account's current balance
         '''
         return self.__account_balance
 
@@ -46,6 +46,6 @@ class Account:
         '''
         Method gets the user's name of the account
 
-        :return: Account User's full name
+        :return: Account's current name
         '''
         return self.__account_name
