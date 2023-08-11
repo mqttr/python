@@ -4,17 +4,17 @@ class Account:
         self.__account_balance = 0.0
     
     def deposit(self, amount):
-        newAmount = self.__account_balance + amount
-        if newAmount <= self.__account_balance:
+        newBalance = self.__account_balance + amount
+        if newBalance <= self.__account_balance:
             return False
-        self.__account_balance = newAmount
+        self.__account_balance = newBalance
         return True
 
     def withdraw(self, amount) :
-        newAmount = self.__account_balance - amount
-        if newAmount < 0 or newAmount >= self.__account_balance:
+        newBalance = self.__account_balance - amount
+        if newBalance < 0 or newBalance >= self.__account_balance:
             return False
-        self.__account_balance = newAmount
+        self.__account_balance = newBalance
         return True
 
     def get_balance(self):
